@@ -8,7 +8,20 @@
   <link rel="stylesheet" href="./assets/stylus/main.styl">
 </head>
 <body>
-  
-  <script src="app/index.ts"></script>
+  <h1>Exchange</h1>
+
+  <p id="messageView"></p>
+
+  <form data-js="form">
+    <input type="date" id="date" required autofocus>
+    <input type="number" min="1" step="1" id="quantity" required>
+    <input type="number" min="0.01" step="0.01" id="value" required>
+
+    <button class="button" type="submit">Add</button>
+  </form>
+
+  <div id="negotiations"></div>
+
+  <script src="app/app.ts"></script>
 </body>
 </html>
