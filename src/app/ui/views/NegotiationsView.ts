@@ -3,7 +3,6 @@ import { DateConverter } from '../converters/DateConverter';
 
 export class NegotiationsView extends View {
   render(model: any): string {
-    console.log(model);
     return `
       <table class="table">
           <thead>
