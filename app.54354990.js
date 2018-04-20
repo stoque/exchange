@@ -98,7 +98,7 @@ var DateConverter = /** @class */function () {
     return DateConverter;
 }();
 exports.DateConverter = DateConverter;
-},{}],19:[function(require,module,exports) {
+},{}],17:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -139,7 +139,7 @@ var View = /** @class */function () {
     return View;
 }();
 exports.View = View;
-},{}],20:[function(require,module,exports) {
+},{}],19:[function(require,module,exports) {
 "use strict";
 
 var __extends = this && this.__extends || function () {
@@ -166,7 +166,7 @@ var MessageView = /** @class */function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     MessageView.prototype.render = function (model) {
-        return model.text ? "<p class=\"alert -success\">" + model.text + "</p>" : '';
+        return model.text ? "<p class=\"notification is-success\">" + model.text + "</p>" : '';
     };
     return MessageView;
 }(View_1.View);
@@ -199,14 +199,14 @@ var NegotiationsView = /** @class */function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     NegotiationsView.prototype.render = function (model) {
-        return "\n      <table class=\"table\">\n          <thead>\n              <tr>\n                  <th>Date</th>\n                  <th>Quantity</th>\n                  <th>Value</th>\n                  <th>Volume</th>\n              </tr>\n          </thead>\n\n          <tbody>\n              " + model.toArray().map(function (negotiation) {
+        return "\n      <table class=\"table is-bordered is-striped is-hoverable is-fullwidth\">\n          <thead>\n              <tr>\n                  <th>Date</th>\n                  <th>Quantity</th>\n                  <th>Value</th>\n                  <th>Volume</th>\n              </tr>\n          </thead>\n\n          <tbody>\n              " + model.toArray().map(function (negotiation) {
             return "\n                  <tr>\n                      <td>" + DateConverter_1.DateConverter.toText(negotiation.date) + "</td>\n                      <td>" + negotiation.quantity + "</td>\n                      <td>" + negotiation.value + "</td>\n                      <td>" + negotiation.volume + "</td>\n                  </tr>";
         }).join('') + "\n          </tbody>\n\n          <tfoot>\n              <tr>\n                  <td colspan=\"3\"></td>\n                  <td>" + model.totalVolume + "</td>\n              </tr>\n          </tfoot>\n      </table>\n    ";
     };
     return NegotiationsView;
 }(View_1.View);
 exports.NegotiationsView = NegotiationsView;
-},{"../converters/DateConverter":18,"./View":36}],22:[function(require,module,exports) {
+},{"../converters/DateConverter":18,"./View":36}],16:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -247,7 +247,7 @@ var Negotiation = /** @class */function () {
     return Negotiation;
 }();
 exports.Negotiation = Negotiation;
-},{}],23:[function(require,module,exports) {
+},{}],20:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -273,7 +273,7 @@ var Negotiations = /** @class */function () {
     return Negotiations;
 }();
 exports.Negotiations = Negotiations;
-},{}],13:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -315,7 +315,7 @@ var NegotiationController = /** @class */function () {
     return NegotiationController;
 }();
 exports.NegotiationController = NegotiationController;
-},{"./../ui/converters/DateConverter":18,"./../ui/models/Message":19,"../ui/views/MessageView":20,"../ui/views/NegotiationsView":21,"./../domain/negotiation/Negotiation":22,"./../domain/negotiation/Negotiations":23}],5:[function(require,module,exports) {
+},{"./../ui/converters/DateConverter":18,"./../ui/models/Message":17,"../ui/views/MessageView":19,"../ui/views/NegotiationsView":21,"./../domain/negotiation/Negotiation":16,"./../domain/negotiation/Negotiations":20}],5:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -325,7 +325,7 @@ var $form = document.querySelector('[data-js="form"]');
 if ($form) {
     $form.addEventListener('submit', controller.add.bind(controller));
 }
-},{"./controllers/NegotiationController":13}],46:[function(require,module,exports) {
+},{"./controllers/NegotiationController":11}],45:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -355,7 +355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51731' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61763' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -494,5 +494,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[46,5])
-//# sourceMappingURL=/app.4145ce22.map
+},{}]},{},[45,5])
+//# sourceMappingURL=/app.54354990.map
