@@ -5,7 +5,7 @@ import { View } from './View';
 export class NegotiationsView extends View {
   public render(model: any): string {
     return `
-      <table class="table">
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth">
           <thead>
               <tr>
                   <th>Date</th>
