@@ -1,8 +1,9 @@
-import { View } from './View';
 import { DateConverter } from '../converters/DateConverter';
 
+import { View } from './View';
+
 export class NegotiationsView extends View {
-  render(model: any): string {
+  public render(model: any): string {
     return `
       <table class="table">
           <thead>
@@ -22,18 +23,16 @@ export class NegotiationsView extends View {
                       <td>${negotiation.quantity}</td>
                       <td>${negotiation.value}</td>
                       <td>${negotiation.volume}</td>
-                  </tr>                        
-              `).join('')}
+                  </tr>`).join('')}
           </tbody>
-          
+
           <tfoot>
               <tr>
                   <td colspan="3"></td>
-                  <td>${model.totalVolume}</td>            
+                  <td>${model.totalVolume}</td>
               </tr>
           </tfoot>
-          
-      </table>      
-    `
+      </table>
+    `;
   }
 }

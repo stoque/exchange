@@ -1,9 +1,12 @@
-import { Negotiations } from './../domain/negotiation/Negotiations';
-import { NegotiationsView } from '../ui/views/NegotiationsView';
-import { Negotiation } from './../domain/negotiation/Negotiation';
 import { DateConverter } from './../ui/converters/DateConverter';
+
 import { Message } from './../ui/models/Message';
+
 import { MessageView } from '../ui/views/MessageView';
+import { NegotiationsView } from '../ui/views/NegotiationsView';
+
+import { Negotiation } from './../domain/negotiation/Negotiation';
+import { Negotiations } from './../domain/negotiation/Negotiations';
 
 export class NegotiationController {
   private _inputDate: any;
@@ -31,7 +34,7 @@ export class NegotiationController {
   public add(event: any): void {
     event.preventDefault();
     this._negotiations.add(this._createNegotiation());
-    this._message.text = 'Successfully created negotiation'
+    this._message.text = 'Successfully created negotiation';
     this._negotiationsView.update(this._negotiations);
     this._clearForm();
     this._messageView.update(this._message);
@@ -47,8 +50,8 @@ export class NegotiationController {
   private _createNegotiation() {
     return new Negotiation(
       DateConverter.toDate(this._inputDate.value),
-      parseInt(this._inputQuantity.value),
-      parseFloat(this._inputValue.value)
+      parseInt(this._inputQuantity.value, 10),
+      parseFloat(this._inputValue.value),
     );
   }
 }

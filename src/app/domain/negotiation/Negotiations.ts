@@ -5,11 +5,11 @@ export class Negotiations {
     this._negotiations = [];
   }
 
-  add(negotiation: any) {
+  public add(negotiation: any) {
     this._negotiations.push(negotiation);
   }
 
-  toArray() {
+  public toArray() {
     return [].concat(this._negotiations);
   }
 

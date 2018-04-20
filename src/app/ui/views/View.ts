@@ -10,6 +10,6 @@ export class View {
   }
 
   public render(model: any) {
-    throw new Error('You need to implement the render method!')
+    throw new Error('You need to implement the render method!');
   }
 }
