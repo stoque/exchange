@@ -2,6 +2,6 @@ import { View } from './View';
 
 export class MessageView extends View {
   public render(model: any): string {
-    return model.text ? `<p>${model.text}</p>` : '';
+    return model.text ? `<p class="alert -success">${model.text}</p>` : '';
   }
 }
