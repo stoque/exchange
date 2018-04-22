@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({13:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -98,7 +98,7 @@ var DateConverter = /** @class */function () {
     return DateConverter;
 }();
 exports.DateConverter = DateConverter;
-},{}],14:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -122,7 +122,7 @@ var Message = /** @class */function () {
     return Message;
 }();
 exports.Message = Message;
-},{}],31:[function(require,module,exports) {
+},{}],13:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -139,7 +139,7 @@ var View = /** @class */function () {
     return View;
 }();
 exports.View = View;
-},{}],15:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 "use strict";
 
 var __extends = this && this.__extends || function () {
@@ -171,7 +171,7 @@ var MessageView = /** @class */function (_super) {
     return MessageView;
 }(View_1.View);
 exports.MessageView = MessageView;
-},{"./View":31}],16:[function(require,module,exports) {
+},{"./View":13}],9:[function(require,module,exports) {
 "use strict";
 
 var __extends = this && this.__extends || function () {
@@ -206,7 +206,7 @@ var NegotiationsView = /** @class */function (_super) {
     return NegotiationsView;
 }(View_1.View);
 exports.NegotiationsView = NegotiationsView;
-},{"../converters/DateConverter":13,"./View":31}],17:[function(require,module,exports) {
+},{"../converters/DateConverter":6,"./View":13}],10:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -247,7 +247,7 @@ var Negotiation = /** @class */function () {
     return Negotiation;
 }();
 exports.Negotiation = Negotiation;
-},{}],18:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -273,7 +273,7 @@ var Negotiations = /** @class */function () {
     return Negotiations;
 }();
 exports.Negotiations = Negotiations;
-},{}],8:[function(require,module,exports) {
+},{}],4:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -315,7 +315,7 @@ var NegotiationController = /** @class */function () {
     return NegotiationController;
 }();
 exports.NegotiationController = NegotiationController;
-},{"./../ui/converters/DateConverter":13,"./../ui/models/Message":14,"../ui/views/MessageView":15,"../ui/views/NegotiationsView":16,"./../domain/negotiation/Negotiation":17,"./../domain/negotiation/Negotiations":18}],2:[function(require,module,exports) {
+},{"./../ui/converters/DateConverter":6,"./../ui/models/Message":7,"../ui/views/MessageView":8,"../ui/views/NegotiationsView":9,"./../domain/negotiation/Negotiation":10,"./../domain/negotiation/Negotiations":11}],2:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -325,7 +325,7 @@ var $form = document.querySelector('[data-js="form"]');
 if ($form) {
     $form.addEventListener('submit', controller.add.bind(controller));
 }
-},{"./controllers/NegotiationController":8}],34:[function(require,module,exports) {
+},{"./controllers/NegotiationController":4}],14:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -355,7 +355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63428' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50816' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -494,5 +494,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[34,2])
+},{}]},{},[14,2])
 //# sourceMappingURL=/app.4145ce22.map
