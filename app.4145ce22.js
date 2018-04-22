@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({18:[function(require,module,exports) {
+})({9:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -98,7 +98,7 @@ var DateConverter = /** @class */function () {
     return DateConverter;
 }();
 exports.DateConverter = DateConverter;
-},{}],17:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -122,7 +122,7 @@ var Message = /** @class */function () {
     return Message;
 }();
 exports.Message = Message;
-},{}],36:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -139,7 +139,7 @@ var View = /** @class */function () {
     return View;
 }();
 exports.View = View;
-},{}],19:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 "use strict";
 
 var __extends = this && this.__extends || function () {
@@ -171,7 +171,7 @@ var MessageView = /** @class */function (_super) {
     return MessageView;
 }(View_1.View);
 exports.MessageView = MessageView;
-},{"./View":36}],21:[function(require,module,exports) {
+},{"./View":21}],12:[function(require,module,exports) {
 "use strict";
 
 var __extends = this && this.__extends || function () {
@@ -206,7 +206,7 @@ var NegotiationsView = /** @class */function (_super) {
     return NegotiationsView;
 }(View_1.View);
 exports.NegotiationsView = NegotiationsView;
-},{"../converters/DateConverter":18,"./View":36}],16:[function(require,module,exports) {
+},{"../converters/DateConverter":9,"./View":21}],13:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -247,7 +247,7 @@ var Negotiation = /** @class */function () {
     return Negotiation;
 }();
 exports.Negotiation = Negotiation;
-},{}],20:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -273,7 +273,7 @@ var Negotiations = /** @class */function () {
     return Negotiations;
 }();
 exports.Negotiations = Negotiations;
-},{}],11:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -315,7 +315,7 @@ var NegotiationController = /** @class */function () {
     return NegotiationController;
 }();
 exports.NegotiationController = NegotiationController;
-},{"./../ui/converters/DateConverter":18,"./../ui/models/Message":17,"../ui/views/MessageView":19,"../ui/views/NegotiationsView":21,"./../domain/negotiation/Negotiation":16,"./../domain/negotiation/Negotiations":20}],5:[function(require,module,exports) {
+},{"./../ui/converters/DateConverter":9,"./../ui/models/Message":10,"../ui/views/MessageView":11,"../ui/views/NegotiationsView":12,"./../domain/negotiation/Negotiation":13,"./../domain/negotiation/Negotiations":14}],5:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -325,7 +325,7 @@ var $form = document.querySelector('[data-js="form"]');
 if ($form) {
     $form.addEventListener('submit', controller.add.bind(controller));
 }
-},{"./controllers/NegotiationController":11}],45:[function(require,module,exports) {
+},{"./controllers/NegotiationController":8}],23:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -355,7 +355,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61763' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58101' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -494,5 +494,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[45,5])
-//# sourceMappingURL=/app.54354990.map
+},{}]},{},[23,5])
+//# sourceMappingURL=/app.4145ce22.map
